@@ -34,6 +34,12 @@ import { RouterLink, RouterView } from "vue-router";
           to="/pokemons"
           >Pokemons</router-link
         >
+        <router-link
+          active-class="active"
+          class="btn btn-outline-primary me-2"
+          to="/favoritos"
+          >Favoritos</router-link
+        >
       </div>
     </div>
   </nav>

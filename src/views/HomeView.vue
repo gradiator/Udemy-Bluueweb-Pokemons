@@ -1,9 +1,13 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
-</script>
+import { useCounterStore } from "@/store/counter.js";
+import { storeToRefs } from "pinia";
 
+const useCounter = useCounterStore();
+</script>
 <template>
   <main>
-    <TheWelcome />
+    <h1>Home counter: {{ useCounter.count }}</h1>
+    <h2>Double: {{ useCounter.double }}</h2>
+    <button @click="useCounter.increment">Increment</button>
   </main>
 </template>
